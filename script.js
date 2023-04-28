@@ -10,19 +10,17 @@ function getRandomImage() {
     .get("https://source.unsplash.com/random/600x400/?car")
     .then((response) => {
       carImage.style.backgroundImage = `url(${response.request.responseURL})`;
-      skeleton.style.display = "none";
     })
     .catch((error) => {
       console.error(error);
       const errorImage = document.querySelector(".error");
       document.body.appendChild(errorImage);
       errorImage.style.display = "block";
-      skeleton.style.display = "none";
       btnCar.style.display = "none";
       carImage.style.display = "none";
     })
     .finally(() => {
-        carImage.style.display = "none";
+        skeleton.style.display = "none";
     });
 }
 
