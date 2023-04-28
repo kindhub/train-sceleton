@@ -22,8 +22,7 @@ function getRandomImage() {
       carImage.style.display = "none";
     })
     .finally(() => {
-      const loader = document.querySelector(".loader");
-      loader.style.display = "none";
+        carImage.style.display = "none";
     });
 }
 
